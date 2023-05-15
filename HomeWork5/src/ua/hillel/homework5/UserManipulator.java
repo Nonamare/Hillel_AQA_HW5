@@ -73,11 +73,17 @@ public class UserManipulator {
         user1.makePurchase(5);
         user1.makePurchase(3.5);
         user1.printTotalAmountOfSpentMoney();
+        user1.addDiscount(20);
+        user1.printTotalAmountOfSpentMoney();
 
         user2.makePurchase(0);
         user2.makePurchase(5);
         user2.makePurchase(-10);
         user2.printTotalAmountOfSpentMoney();
+        user2.addDiscount(-1);
+        user2.addDiscount(120);
+        user2.printTotalAmountOfSpentMoney();
+
 
         user3.makePurchase(100);
         user3.printTotalAmountOfSpentMoney();

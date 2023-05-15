@@ -56,6 +56,17 @@ public class User {
         return password;
     }
 
+    // Calculates discount for the total sum
+
+    /**
+     * @param discount - 0-100%
+     */
+    public void addDiscount(int discount) {
+        if ((discount < 0) || (discount > 100))
+            System.out.println(userName + "! We don't believe we can give discount less than 0% and more than 100% - " + discount);
+        amountSpentMoney = amountSpentMoney * ((double) (100 - discount) / 100);
+    }
+
     public void makePurchase(double amount) {
         if (!isActive) {
             System.out.println(userName + ": we believe that inactive users do not try to make a purchase. Most probably they even do not breath. Probably...");
