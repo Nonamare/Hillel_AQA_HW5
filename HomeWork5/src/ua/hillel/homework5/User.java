@@ -5,7 +5,7 @@ public class User {
     // повинні мати модифікатор доступу private.
     // Зробити геттери і сеттери з валідацією для private полів(валідація довільна).
 
-    // I know I violates code convention using caps lock - it's for special purpose
+    // I know I violate code convention using caps lock - it's for special purpose
     private static boolean DELETE_ME;
 
     private static final String defaultPassword = "123456";
