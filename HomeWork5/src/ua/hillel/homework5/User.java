@@ -4,6 +4,10 @@ public class User {
     // поля userName, age, email, password, isActive(boolean), amountSpentMoney. password та age
     // повинні мати модифікатор доступу private.
     // Зробити геттери і сеттери з валідацією для private полів(валідація довільна).
+
+    // I know I violates code convention using caps lock - it's for special purpose
+    private static boolean DELETE_ME;
+
     private static final String defaultPassword = "123456";
     private int age;
     private String password;
@@ -54,6 +58,17 @@ public class User {
             throw new IllegalArgumentException("Please specify user's password before retrieving it");
         }
         return password;
+    }
+
+    // Calculates discount for the total sum
+
+    /**
+     * @param discount - 0-100%
+     */
+    public void addDiscount(int discount) {
+        if ((discount < 0) || (discount > 100))
+            System.out.println(userName + "! We don't believe we can give discount less than 0% and more than 100% - " + discount);
+        amountSpentMoney = amountSpentMoney * ((double) (100 - discount) / 100);
     }
 
     public void makePurchase(double amount) {
